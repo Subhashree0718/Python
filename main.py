@@ -18,15 +18,7 @@ def main():
             return results
         if i >= len(lines):
             return results + [-1]
-        try:
-            x = int(lines[i])
-        except:
-            return results + [-1]
-        if i + 1 >= len(lines):
-            return results + [-1]
-        values = lines[i + 1].split()
-        if len(values) != x:
-            return handle_case(i + 2, remaining - 1, results + [-1])
+       
         try:
             arr = list(map(int, values))
         except:
